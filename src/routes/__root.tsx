@@ -72,14 +72,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "Limpieza Profesional e integral para tu empresa" },
+      { name: "description", content: "AML Sparkle is a premium, ultra-dynamic, and responsive landing page for AML Servicios Integrales." },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "Limpieza Profesional e integral para tu empresa" },
+      { property: "og:description", content: "AML Sparkle is a premium, ultra-dynamic, and responsive landing page for AML Servicios Integrales." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Limpieza Profesional e integral para tu empresa" },
+      { name: "twitter:description", content: "AML Sparkle is a premium, ultra-dynamic, and responsive landing page for AML Servicios Integrales." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/0Jtg2lOgnSR5MQAehZfElkGjmEg2/social-images/social-1779148136134-bsg_social.webp" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/0Jtg2lOgnSR5MQAehZfElkGjmEg2/social-images/social-1779148136134-bsg_social.webp" },
     ],
     links: [
       {
