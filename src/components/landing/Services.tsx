@@ -12,6 +12,16 @@ import {
   Wind,
   type LucideIcon,
 } from "lucide-react";
+import consorciosImg from "@/assets/consorcios.jpg";
+import oficinasImg from "@/assets/oficinas.jpg";
+import desinfeccionImg from "@/assets/desinfeccion.jpg";
+import tanquesImg from "@/assets/tanques.jpg";
+import educativosImg from "@/assets/educativos.jpg";
+import deportivosImg from "@/assets/deportivos.jpg";
+import vidriosImg from "@/assets/vidrios.jpg";
+import espaciosImg from "@/assets/espacios.jpg";
+import eventosImg from "@/assets/eventos.jpg";
+import foggingImg from "@/assets/fogging.jpg";
 
 type Service = {
   title: string;
@@ -19,6 +29,7 @@ type Service = {
   icon: LucideIcon;
   className: string;
   accent?: boolean;
+  image: string;
 };
 
 const services: Service[] = [
@@ -28,54 +39,63 @@ const services: Service[] = [
     icon: Building2,
     className: "md:col-span-2 md:row-span-2",
     accent: true,
+    image: consorciosImg,
   },
   {
     title: "Oficinas, Industrias y Comercios",
     description: "Limpieza programada que potencia la productividad de tu equipo.",
     icon: Briefcase,
     className: "md:col-span-2",
+    image: oficinasImg,
   },
   {
     title: "Desinfección y Sanitización",
     description: "Protocolos específicos con productos certificados.",
     icon: Sparkles,
     className: "",
+    image: desinfeccionImg,
   },
   {
     title: "Limpieza de Tanques de Agua",
     description: "Procedimiento normado, con certificado oficial al finalizar.",
     icon: Droplets,
     className: "",
-  },
-  {
-    title: "Vidrios de Altura",
-    description: "Personal especializado en trabajos verticales con seguridad total.",
-    icon: GlassWater,
-    className: "md:col-span-2",
+    image: tanquesImg,
   },
   {
     title: "Establecimientos Educativos",
     description: "Espacios seguros para alumnos y docentes, todos los días.",
     icon: GraduationCap,
     className: "",
+    image: educativosImg,
   },
   {
     title: "Centros Deportivos",
     description: "Higiene profunda para clubes, gimnasios y vestuarios.",
     icon: Dumbbell,
     className: "",
+    image: deportivosImg,
+  },
+  {
+    title: "Vidrios de Altura",
+    description: "Personal especializado en trabajos verticales con seguridad total.",
+    icon: GlassWater,
+    className: "md:col-span-2",
+    image: vidriosImg,
   },
   {
     title: "Espacios Públicos y Verdes",
     description: "Mantenimiento de parques, plazas y áreas comunes.",
     icon: Trees,
     className: "md:col-span-2",
+    image: espaciosImg,
   },
   {
     title: "Personal para Eventos",
     description: "Equipos antes, durante y después de tu evento.",
     icon: Users,
     className: "",
+    image: eventosImg,
   },
   {
     title: "Fogging (Nebulización)",
@@ -83,6 +103,7 @@ const services: Service[] = [
     icon: Wind,
     className: "md:col-span-2",
     accent: true,
+    image: foggingImg,
   },
 ];
 
@@ -135,6 +156,17 @@ export function Services() {
               transition={{ type: "spring", stiffness: 250, damping: 20 }}
               className={`group relative overflow-hidden rounded-3xl glass p-6 shadow-card ${s.className}`}
             >
+              {/* Background image */}
+              <div
+                className="pointer-events-none absolute inset-0 bg-cover bg-center opacity-40 transition-all duration-500 group-hover:opacity-60 group-hover:scale-105"
+                style={{ backgroundImage: `url(${s.image})` }}
+                aria-hidden="true"
+              />
+              {/* Dark gradient overlay for legibility */}
+              <div
+                className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[var(--background)] via-[var(--background)]/70 to-[var(--background)]/20"
+                aria-hidden="true"
+              />
               {s.accent && (
                 <div className="pointer-events-none absolute inset-0 opacity-40">
                   <div className="absolute -top-20 -right-20 h-56 w-56 rounded-full bg-gradient-to-br from-[var(--cyan-glow)] to-[var(--electric)] blur-3xl" />
@@ -144,12 +176,12 @@ export function Services() {
                 <motion.div
                   whileHover={{ rotate: -8, scale: 1.1 }}
                   transition={{ type: "spring", stiffness: 300 }}
-                  className="grid h-12 w-12 place-items-center rounded-2xl bg-gradient-to-br from-[var(--cyan-glow)]/20 to-[var(--electric)]/20 ring-1 ring-white/10"
+                  className="grid h-12 w-12 place-items-center rounded-2xl bg-gradient-to-br from-[var(--cyan-glow)]/20 to-[var(--electric)]/20 ring-1 ring-white/10 backdrop-blur-sm"
                 >
                   <s.icon className="h-6 w-6 text-[var(--aqua)] transition-colors group-hover:text-foreground" />
                 </motion.div>
                 <div>
-                  <h3 className="text-lg font-bold tracking-tight">{s.title}</h3>
+                  <h3 className="text-lg font-bold tracking-tight drop-shadow-md">{s.title}</h3>
                   <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">
                     {s.description}
                   </p>
