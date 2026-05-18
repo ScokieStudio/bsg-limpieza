@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowDown, ShieldCheck, Sparkles, Droplets } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import heroBg from "@/assets/consorcios.jpg";
 
 const container = {
   hidden: { opacity: 0 },
@@ -21,6 +22,24 @@ export function Hero() {
       id="inicio"
       className="relative flex min-h-screen items-center justify-center overflow-hidden px-4 pt-32 pb-20 sm:px-6 lg:px-8"
     >
+      {/* Background image with parallax-like scale + dark overlays for legibility */}
+      <motion.div
+        initial={{ scale: 1.1, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ duration: 1.6, ease: [0.22, 1, 0.36, 1] }}
+        className="pointer-events-none absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: `url(${heroBg})` }}
+        aria-hidden="true"
+      />
+      <div
+        className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[var(--background)]/70 via-[var(--background)]/60 to-[var(--background)]"
+        aria-hidden="true"
+      />
+      <div
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,transparent,var(--background))]"
+        aria-hidden="true"
+      />
+
       <motion.div
         variants={container}
         initial="hidden"
