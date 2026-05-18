@@ -84,11 +84,12 @@ const services: Service[] = [
     image: vidriosImg,
   },
   {
-    title: "Espacios Públicos y Verdes",
-    description: "Mantenimiento de parques, plazas y áreas comunes.",
-    icon: Trees,
+    title: "Fogging (Nebulización)",
+    description: "Desinfección por nebulización de alto alcance.",
+    icon: Wind,
     className: "md:col-span-2",
-    image: espaciosImg,
+    accent: true,
+    image: foggingImg,
   },
   {
     title: "Personal para Eventos",
@@ -98,12 +99,11 @@ const services: Service[] = [
     image: eventosImg,
   },
   {
-    title: "Fogging (Nebulización)",
-    description: "Desinfección por nebulización de alto alcance.",
-    icon: Wind,
-    className: "md:col-span-2",
-    accent: true,
-    image: foggingImg,
+    title: "Espacios Públicos y Verdes",
+    description: "Mantenimiento de parques, plazas y áreas comunes.",
+    icon: Trees,
+    className: "",
+    image: espaciosImg,
   },
 ];
 
