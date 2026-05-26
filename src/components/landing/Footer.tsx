@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Mail, Phone, Instagram, Sparkles } from "lucide-react";
+import bsgLogo from "@/assets/bsg_02.png";
 
 export function Footer() {
   return (
@@ -14,16 +15,11 @@ export function Footer() {
         >
           <div className="grid gap-10 md:grid-cols-3">
             <div>
-              <a href="#inicio" className="flex items-center gap-2">
-                <div className="grid h-10 w-10 place-items-center rounded-xl gradient-bg shadow-glow">
-                  <Sparkles className="h-5 w-5 text-primary-foreground" />
-                </div>
-                <div>
-                  <div className="text-lg font-extrabold tracking-tight">AML Servicios</div>
-                  <div className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-                    Limpieza Integral
-                  </div>
-                </div>
+              <a href="#inicio" className="group flex items-center gap-2">
+                <img src={bsgLogo} alt="BSG Logo" className="h-12 w-auto object-contain" />
+                <span className="text-sm font-bold tracking-normal text-foreground">
+                  LIMPIEZA INTEGRAL
+                </span>
               </a>
               <p className="mt-5 max-w-sm text-sm text-muted-foreground">
                 Limpieza profesional con más de 20 años de trayectoria.
@@ -38,7 +34,7 @@ export function Footer() {
               <ul className="mt-5 space-y-4 text-sm">
                 <li>
                   <a
-                    href="https://wa.me/5491140749436"
+                    href="https://wa.me/5491125123301"
                     target="_blank"
                     rel="noreferrer"
                     className="group flex items-center gap-3 text-foreground/80 hover:text-foreground"
@@ -46,23 +42,23 @@ export function Footer() {
                     <span className="grid h-9 w-9 place-items-center rounded-xl bg-white/5 ring-1 ring-white/10 group-hover:bg-white/10">
                       <Phone className="h-4 w-4 text-[var(--aqua)]" />
                     </span>
-                    +54 911 4074 9436
+                    +54 911 2512 3301
                   </a>
                 </li>
                 <li>
                   <a
-                    href="mailto:administracion@amlservicios.com.ar"
+                    href="mailto:info@bsglimpieza.com"
                     className="group flex items-center gap-3 text-foreground/80 hover:text-foreground"
                   >
                     <span className="grid h-9 w-9 place-items-center rounded-xl bg-white/5 ring-1 ring-white/10 group-hover:bg-white/10">
                       <Mail className="h-4 w-4 text-[var(--aqua)]" />
                     </span>
-                    administracion@amlservicios.com.ar
+                    info@bsglimpieza.com
                   </a>
                 </li>
                 <li>
                   <a
-                    href="https://instagram.com/amlservicios"
+                    href="https://www.instagram.com/bsg._limpieza/"
                     target="_blank"
                     rel="noreferrer"
                     className="group flex items-center gap-3 text-foreground/80 hover:text-foreground"
@@ -70,7 +66,7 @@ export function Footer() {
                     <span className="grid h-9 w-9 place-items-center rounded-xl bg-white/5 ring-1 ring-white/10 group-hover:bg-white/10">
                       <Instagram className="h-4 w-4 text-[var(--aqua)]" />
                     </span>
-                    @amlservicios
+                    @bsg._limpieza
                   </a>
                 </li>
               </ul>
@@ -100,12 +96,11 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="mt-10 flex flex-col items-center justify-between gap-3 border-t border-white/10 pt-6 text-xs text-muted-foreground sm:flex-row">
-            <p>© {new Date().getFullYear()} AML Servicios Integrales. Todos los derechos reservados.</p>
-            <p>Diseñado con pulcritud · Hecho en Argentina</p>
+          <div className="mt-10 flex flex-col items-center justify-center gap-3 border-t border-white/10 pt-6 text-xs text-muted-foreground sm:flex-row">
+            <p>© {new Date().getFullYear()} BSG Limpieza · Todos los derechos reservados - Hecho con <span className="text-primary">♥</span> por <a href="https://www.scokiestudio.com/" target="_blank" rel="noreferrer" className="text-primary hover:underline">ScokieStudio Design</a></p>
           </div>
         </motion.div>
       </div>
     </footer>
   );
-}
+} 

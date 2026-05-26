@@ -43,7 +43,7 @@ const schema = z.object({
   message: z.string().max(800).optional(),
 });
 
-const WHATSAPP_NUMBER = "5491140749436";
+const WHATSAPP_NUMBER = "5491125123301";
 
 export function QuoteForm() {
   const [form, setForm] = useState({
@@ -70,20 +70,20 @@ export function QuoteForm() {
 
   const waLink = useMemo(() => {
     const lines = [
-      "*Nueva solicitud de cotización — AML Servicios*",
+      "*Nueva solicitud de cotización — BSG Limpieza*",
       "",
-      "*Datos personales*",
-      `• Nombre: ${form.name}`,
-      `• Email: ${form.email}`,
-      `• Teléfono: ${form.phone}`,
-      `• Empresa / Consorcio: ${form.company}`,
+      "*DATOS PERSONALES*",
+      `• NOMBRE: ${form.name}`,
+      `• EMAIL: ${form.email}`,
+      `• TELÉFONO: ${form.phone}`,
+      `• EMPRESA / CONSORCIO: ${form.company}`,
       "",
-      "*Detalle del servicio*",
-      `• Servicios: ${form.services.join(", ") || "—"}`,
-      `• Empleados requeridos: ${form.employees}`,
-      `• Frecuencia (días/semana): ${form.frequency}`,
+      "*DETALLE DEL SERVICIO*",
+      `• SERVICIOS: ${form.services.join(", ") || "—"}`,
+      `• EMPLEADOS REQUERIDOS: ${form.employees}`,
+      `• FRECUENCIA (días/semana): ${form.frequency}`,
       "",
-      "*Mensaje adicional*",
+      "*MENSAJE ADICIONAL*",
       form.message?.trim() || "—",
     ].join("\n");
     return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(lines)}`;
@@ -118,7 +118,7 @@ export function QuoteForm() {
             Contanos qué necesitás{" "}
             <span className="gradient-text">y te respondemos por WhatsApp</span>
           </h2>
-          <p className="mt-4 text-muted-foreground">
+          <p className="mt-4 text-white/80">
             Completá el formulario en menos de un minuto. Tu solicitud llega
             directo a nuestro equipo comercial.
           </p>
@@ -187,11 +187,10 @@ export function QuoteForm() {
                     whileHover={{ scale: 1.04 }}
                     whileTap={{ scale: 0.96 }}
                     onClick={() => toggleService(s)}
-                    className={`rounded-full border px-4 py-2 text-xs font-medium transition-all ${
-                      active
-                        ? "border-transparent gradient-bg text-primary-foreground shadow-glow"
-                        : "border-white/10 bg-white/5 text-foreground/80 hover:bg-white/10"
-                    }`}
+                    className={`rounded-full border px-4 py-2 text-xs font-medium transition-all ${active
+                      ? "border-transparent gradient-bg text-primary-foreground shadow-glow"
+                      : "border-white/10 bg-white/5 text-foreground/80 hover:bg-white/10"
+                      }`}
                   >
                     {s}
                   </motion.button>
@@ -249,11 +248,10 @@ export function QuoteForm() {
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     onClick={() => update("frequency", f)}
-                    className={`h-12 min-w-12 rounded-xl px-4 text-sm font-bold transition-all ${
-                      form.frequency === f
-                        ? "gradient-bg text-primary-foreground shadow-glow"
-                        : "glass text-foreground/80 hover:bg-white/10"
-                    }`}
+                    className={`h-12 min-w-12 rounded-xl px-4 text-sm font-bold transition-all ${form.frequency === f
+                      ? "gradient-bg text-primary-foreground shadow-glow"
+                      : "glass text-foreground/80 hover:bg-white/10"
+                      }`}
                   >
                     {f}x
                   </motion.button>

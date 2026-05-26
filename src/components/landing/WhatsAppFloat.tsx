@@ -2,8 +2,8 @@ import { motion } from "framer-motion";
 
 export function WhatsAppFloat() {
   const href =
-    "https://wa.me/5491140749436?text=" +
-    encodeURIComponent("Hola AML Servicios, quisiera más información.");
+    "https://wa.me/5491125123301?text=" +
+    encodeURIComponent("Hola BSG Limpieza, quisiera más información.");
 
   return (
     <motion.a

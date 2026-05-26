@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Sparkles } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import bsgLogo from "@/assets/bsg_02.png";
 import { Button } from "@/components/ui/button";
 
 const links = [
@@ -25,28 +26,19 @@ export function Navbar() {
       initial={{ y: -40, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "py-3" : "py-5"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "py-3" : "py-5"
+        }`}
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div
-          className={`flex items-center justify-between rounded-2xl px-4 py-3 transition-all duration-300 ${
-            scrolled ? "glass-strong shadow-card" : ""
-          }`}
+          className={`flex items-center justify-between rounded-2xl px-4 py-3 transition-all duration-300 ${scrolled ? "glass-strong shadow-card" : ""
+            }`}
         >
           <a href="#inicio" className="group flex items-center gap-2">
-            <div className="relative grid h-10 w-10 place-items-center rounded-xl gradient-bg shadow-glow">
-              <Sparkles className="h-5 w-5 text-primary-foreground" />
-            </div>
-            <div className="flex flex-col leading-none">
-              <span className="text-lg font-extrabold tracking-tight text-foreground">
-                AML
-              </span>
-              <span className="text-[10px] font-medium uppercase tracking-[0.2em] text-muted-foreground">
-                Servicios
-              </span>
-            </div>
+            <img src={bsgLogo} alt="BSG Logo" className="h-12 w-auto object-contain" />
+            <span className="text-lg font-bold tracking-normal text-foreground">
+              LIMPIEZA INTEGRAL
+            </span>
           </a>
 
           <nav className="hidden items-center gap-8 md:flex">

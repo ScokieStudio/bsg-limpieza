@@ -5,13 +5,13 @@ import { Toaster } from "@/components/ui/sonner";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "AML Servicios Integrales · Limpieza Profesional para Empresas" },
+      { title: "BSG Limpieza · Limpieza Profesional para Empresas" },
       {
         name: "description",
         content:
           "Más de 20 años brindando limpieza integral, desinfección y mantenimiento para consorcios, oficinas, industrias y eventos. Cotizá por WhatsApp.",
       },
-      { property: "og:title", content: "AML Servicios Integrales" },
+      { property: "og:title", content: "BSG Limpieza" },
       {
         property: "og:description",
         content:
