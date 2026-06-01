@@ -10,4 +10,9 @@ import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 // auto-includes during production builds.
 export default defineConfig({
   cloudflare: false,
+  tanstackStart: {
+    server: {
+      preset: "vercel",
+    },
+  },
 });
