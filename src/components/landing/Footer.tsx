@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Mail, Phone, Instagram, Sparkles } from "lucide-react";
-import bsgLogo from "@/assets/bsg_02.png";
+import bsgLogo from "@/assets/BSG_02.png";
 
 export function Footer() {
   return (

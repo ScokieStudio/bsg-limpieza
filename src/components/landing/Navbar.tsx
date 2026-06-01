@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import bsgLogo from "@/assets/bsg_02.png";
+import bsgLogo from "@/assets/BSG_02.png";
 import { Button } from "@/components/ui/button";
 
 const links = [
